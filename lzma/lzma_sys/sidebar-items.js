@@ -1,0 +1,1 @@
+initSidebarItems({"constant":[["LZMA_CONCATENATED",""],["LZMA_TELL_ANY_CHECK",""],["LZMA_TELL_NO_CHECK",""],["LZMA_TELL_UNSUPPORTED_CHECK",""]],"enum":[["lzma_action",""],["lzma_check",""],["lzma_ret",""]],"fn":[["lzma_code",""],["lzma_easy_encoder",""],["lzma_end",""],["lzma_stream_decoder",""]],"struct":[["lzma_allocator",""],["lzma_stream",""]]});
