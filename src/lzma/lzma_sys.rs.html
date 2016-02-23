@@ -149,27 +149,27 @@
 <span class='attribute'>#[<span class='ident'>repr</span>(<span class='ident'>C</span>)]</span>
 <span class='kw'>pub</span> <span class='kw'>struct</span> <span class='ident'>lzma_stream</span> {
 	<span class='kw'>pub</span> <span class='ident'>next_in</span>: <span class='op'>*</span><span class='kw'>const</span> <span class='ident'>u8</span>,
-    <span class='kw'>pub</span> <span class='ident'>avail_in</span>: <span class='ident'>usize</span>,
-    <span class='kw'>pub</span> <span class='ident'>total_in</span>: <span class='ident'>u64</span>,
+	<span class='kw'>pub</span> <span class='ident'>avail_in</span>: <span class='ident'>usize</span>,
+	<span class='kw'>pub</span> <span class='ident'>total_in</span>: <span class='ident'>u64</span>,
 
-    <span class='kw'>pub</span> <span class='ident'>next_out</span>: <span class='op'>*</span><span class='kw-2'>mut</span> <span class='ident'>u8</span>,
-    <span class='kw'>pub</span> <span class='ident'>avail_out</span>: <span class='ident'>usize</span>,
-    <span class='kw'>pub</span> <span class='ident'>total_out</span>: <span class='ident'>u64</span>,
+	<span class='kw'>pub</span> <span class='ident'>next_out</span>: <span class='op'>*</span><span class='kw-2'>mut</span> <span class='ident'>u8</span>,
+	<span class='kw'>pub</span> <span class='ident'>avail_out</span>: <span class='ident'>usize</span>,
+	<span class='kw'>pub</span> <span class='ident'>total_out</span>: <span class='ident'>u64</span>,
 
-    <span class='kw'>pub</span> <span class='ident'>allocator</span>: <span class='op'>*</span><span class='kw'>const</span> <span class='ident'>lzma_allocator</span>,
+	<span class='kw'>pub</span> <span class='ident'>allocator</span>: <span class='op'>*</span><span class='kw'>const</span> <span class='ident'>lzma_allocator</span>,
 
-    <span class='kw'>pub</span> <span class='ident'>internal</span>: <span class='op'>*</span><span class='kw-2'>mut</span> <span class='ident'>libc</span>::<span class='ident'>c_void</span>,   <span class='comment'>/* Actually lzma_internal, but lzma_internal is opaque */</span>
+	<span class='kw'>pub</span> <span class='ident'>internal</span>: <span class='op'>*</span><span class='kw-2'>mut</span> <span class='ident'>libc</span>::<span class='ident'>c_void</span>,   <span class='comment'>/* Actually lzma_internal, but lzma_internal is opaque */</span>
 
-    <span class='kw'>pub</span> <span class='ident'>reserved_ptr1</span>: <span class='op'>*</span><span class='kw-2'>mut</span> <span class='ident'>libc</span>::<span class='ident'>c_void</span>,
-    <span class='kw'>pub</span> <span class='ident'>reserved_ptr2</span>: <span class='op'>*</span><span class='kw-2'>mut</span> <span class='ident'>libc</span>::<span class='ident'>c_void</span>,
-    <span class='kw'>pub</span> <span class='ident'>reserved_ptr3</span>: <span class='op'>*</span><span class='kw-2'>mut</span> <span class='ident'>libc</span>::<span class='ident'>c_void</span>,
-    <span class='kw'>pub</span> <span class='ident'>reserved_ptr4</span>: <span class='op'>*</span><span class='kw-2'>mut</span> <span class='ident'>libc</span>::<span class='ident'>c_void</span>,
-    <span class='kw'>pub</span> <span class='ident'>reserved_int1</span>: <span class='op'>*</span><span class='kw-2'>mut</span> <span class='ident'>u64</span>,
-    <span class='kw'>pub</span> <span class='ident'>reserved_int2</span>: <span class='op'>*</span><span class='kw-2'>mut</span> <span class='ident'>u64</span>,
-    <span class='kw'>pub</span> <span class='ident'>reserved_int3</span>: <span class='op'>*</span><span class='kw-2'>mut</span> <span class='ident'>usize</span>,
-    <span class='kw'>pub</span> <span class='ident'>reserved_int4</span>: <span class='op'>*</span><span class='kw-2'>mut</span> <span class='ident'>usize</span>,
-    <span class='kw'>pub</span> <span class='ident'>reserved_enum1</span>: <span class='ident'>u32</span>,  <span class='comment'>// TODO: in base.h this is lzma_reserved_enum, which seems to compile to 4-bytes</span>
-    <span class='kw'>pub</span> <span class='ident'>reserved_enum2</span>: <span class='ident'>u32</span>,  <span class='comment'>// TODO: in base.h this is lzma_reserved_enum, which seems to compile to 4-bytes</span>
+	<span class='kw'>pub</span> <span class='ident'>reserved_ptr1</span>: <span class='op'>*</span><span class='kw-2'>mut</span> <span class='ident'>libc</span>::<span class='ident'>c_void</span>,
+	<span class='kw'>pub</span> <span class='ident'>reserved_ptr2</span>: <span class='op'>*</span><span class='kw-2'>mut</span> <span class='ident'>libc</span>::<span class='ident'>c_void</span>,
+	<span class='kw'>pub</span> <span class='ident'>reserved_ptr3</span>: <span class='op'>*</span><span class='kw-2'>mut</span> <span class='ident'>libc</span>::<span class='ident'>c_void</span>,
+	<span class='kw'>pub</span> <span class='ident'>reserved_ptr4</span>: <span class='op'>*</span><span class='kw-2'>mut</span> <span class='ident'>libc</span>::<span class='ident'>c_void</span>,
+	<span class='kw'>pub</span> <span class='ident'>reserved_int1</span>: <span class='op'>*</span><span class='kw-2'>mut</span> <span class='ident'>u64</span>,
+	<span class='kw'>pub</span> <span class='ident'>reserved_int2</span>: <span class='op'>*</span><span class='kw-2'>mut</span> <span class='ident'>u64</span>,
+	<span class='kw'>pub</span> <span class='ident'>reserved_int3</span>: <span class='op'>*</span><span class='kw-2'>mut</span> <span class='ident'>usize</span>,
+	<span class='kw'>pub</span> <span class='ident'>reserved_int4</span>: <span class='op'>*</span><span class='kw-2'>mut</span> <span class='ident'>usize</span>,
+	<span class='kw'>pub</span> <span class='ident'>reserved_enum1</span>: <span class='ident'>u32</span>,  <span class='comment'>// TODO: in base.h this is lzma_reserved_enum, which seems to compile to 4-bytes</span>
+	<span class='kw'>pub</span> <span class='ident'>reserved_enum2</span>: <span class='ident'>u32</span>,  <span class='comment'>// TODO: in base.h this is lzma_reserved_enum, which seems to compile to 4-bytes</span>
 }
 
 <span class='kw'>impl</span> <span class='ident'>lzma_stream</span> {
@@ -184,9 +184,9 @@
 
 <span class='attribute'>#[<span class='ident'>repr</span>(<span class='ident'>C</span>)]</span>
 <span class='kw'>pub</span> <span class='kw'>struct</span> <span class='ident'>lzma_allocator</span> {
-    <span class='kw'>pub</span> <span class='ident'>alloc</span>: <span class='op'>*</span><span class='kw-2'>mut</span> <span class='kw'>extern</span> <span class='kw'>fn</span>(<span class='ident'>opaque</span>: <span class='op'>*</span><span class='kw-2'>mut</span> <span class='ident'>libc</span>::<span class='ident'>c_void</span>, <span class='ident'>nmemb</span>: <span class='ident'>usize</span>, <span class='ident'>size</span>: <span class='ident'>usize</span>),
-    <span class='kw'>pub</span> <span class='ident'>free</span>: <span class='kw'>extern</span> <span class='kw'>fn</span>(<span class='ident'>opaque</span>: <span class='op'>*</span><span class='kw-2'>mut</span> <span class='ident'>libc</span>::<span class='ident'>c_void</span>, <span class='ident'>ptr</span>: <span class='op'>*</span><span class='kw-2'>mut</span> <span class='ident'>libc</span>::<span class='ident'>c_void</span>),
-    <span class='kw'>pub</span> <span class='ident'>opaque</span>: <span class='op'>*</span><span class='kw-2'>mut</span> <span class='ident'>libc</span>::<span class='ident'>c_void</span>,
+	<span class='kw'>pub</span> <span class='ident'>alloc</span>: <span class='op'>*</span><span class='kw-2'>mut</span> <span class='kw'>extern</span> <span class='kw'>fn</span>(<span class='ident'>opaque</span>: <span class='op'>*</span><span class='kw-2'>mut</span> <span class='ident'>libc</span>::<span class='ident'>c_void</span>, <span class='ident'>nmemb</span>: <span class='ident'>usize</span>, <span class='ident'>size</span>: <span class='ident'>usize</span>),
+	<span class='kw'>pub</span> <span class='ident'>free</span>: <span class='kw'>extern</span> <span class='kw'>fn</span>(<span class='ident'>opaque</span>: <span class='op'>*</span><span class='kw-2'>mut</span> <span class='ident'>libc</span>::<span class='ident'>c_void</span>, <span class='ident'>ptr</span>: <span class='op'>*</span><span class='kw-2'>mut</span> <span class='ident'>libc</span>::<span class='ident'>c_void</span>),
+	<span class='kw'>pub</span> <span class='ident'>opaque</span>: <span class='op'>*</span><span class='kw-2'>mut</span> <span class='ident'>libc</span>::<span class='ident'>c_void</span>,
 }
 
 
@@ -194,18 +194,18 @@
 <span class='attribute'>#[<span class='ident'>derive</span>(<span class='ident'>Clone</span>, <span class='ident'>Copy</span>, <span class='ident'>Debug</span>)]</span>
 <span class='attribute'>#[<span class='ident'>must_use</span>]</span>
 <span class='kw'>pub</span> <span class='kw'>enum</span> <span class='ident'>lzma_ret</span> {
-    <span class='ident'>LZMA_OK</span>                  <span class='op'>=</span> <span class='number'>0</span>,
-    <span class='ident'>LZMA_STREAM_END</span>          <span class='op'>=</span> <span class='number'>1</span>,
-    <span class='ident'>LZMA_NO_CHECK</span>            <span class='op'>=</span> <span class='number'>2</span>,
-    <span class='ident'>LZMA_UNSUPPORTED_CHECK</span>   <span class='op'>=</span> <span class='number'>3</span>,
-    <span class='ident'>LZMA_GET_CHECK</span>           <span class='op'>=</span> <span class='number'>4</span>,
-    <span class='ident'>LZMA_MEM_ERROR</span>           <span class='op'>=</span> <span class='number'>5</span>,
-    <span class='ident'>LZMA_MEMLIMIT_ERROR</span>      <span class='op'>=</span> <span class='number'>6</span>,
-    <span class='ident'>LZMA_FORMAT_ERROR</span>        <span class='op'>=</span> <span class='number'>7</span>,
-    <span class='ident'>LZMA_OPTIONS_ERROR</span>       <span class='op'>=</span> <span class='number'>8</span>,
-    <span class='ident'>LZMA_DATA_ERROR</span>          <span class='op'>=</span> <span class='number'>9</span>,
-    <span class='ident'>LZMA_BUF_ERROR</span>           <span class='op'>=</span> <span class='number'>10</span>,
-    <span class='ident'>LZMA_PROG_ERROR</span>          <span class='op'>=</span> <span class='number'>11</span>,
+	<span class='ident'>LZMA_OK</span>                  <span class='op'>=</span> <span class='number'>0</span>,
+	<span class='ident'>LZMA_STREAM_END</span>          <span class='op'>=</span> <span class='number'>1</span>,
+	<span class='ident'>LZMA_NO_CHECK</span>            <span class='op'>=</span> <span class='number'>2</span>,
+	<span class='ident'>LZMA_UNSUPPORTED_CHECK</span>   <span class='op'>=</span> <span class='number'>3</span>,
+	<span class='ident'>LZMA_GET_CHECK</span>           <span class='op'>=</span> <span class='number'>4</span>,
+	<span class='ident'>LZMA_MEM_ERROR</span>           <span class='op'>=</span> <span class='number'>5</span>,
+	<span class='ident'>LZMA_MEMLIMIT_ERROR</span>      <span class='op'>=</span> <span class='number'>6</span>,
+	<span class='ident'>LZMA_FORMAT_ERROR</span>        <span class='op'>=</span> <span class='number'>7</span>,
+	<span class='ident'>LZMA_OPTIONS_ERROR</span>       <span class='op'>=</span> <span class='number'>8</span>,
+	<span class='ident'>LZMA_DATA_ERROR</span>          <span class='op'>=</span> <span class='number'>9</span>,
+	<span class='ident'>LZMA_BUF_ERROR</span>           <span class='op'>=</span> <span class='number'>10</span>,
+	<span class='ident'>LZMA_PROG_ERROR</span>          <span class='op'>=</span> <span class='number'>11</span>,
 }
 
 
@@ -224,9 +224,9 @@
 <span class='attribute'>#[<span class='ident'>derive</span>(<span class='ident'>Clone</span>, <span class='ident'>Copy</span>)]</span>
 <span class='kw'>pub</span> <span class='kw'>enum</span> <span class='ident'>lzma_check</span> {
 	<span class='ident'>LZMA_CHECK_NONE</span>     <span class='op'>=</span> <span class='number'>0</span>,
-    <span class='ident'>LZMA_CHECK_CRC32</span>    <span class='op'>=</span> <span class='number'>1</span>,
-    <span class='ident'>LZMA_CHECK_CRC64</span>    <span class='op'>=</span> <span class='number'>4</span>,
-    <span class='ident'>LZMA_CHECK_SHA256</span>   <span class='op'>=</span> <span class='number'>10</span>,
+	<span class='ident'>LZMA_CHECK_CRC32</span>    <span class='op'>=</span> <span class='number'>1</span>,
+	<span class='ident'>LZMA_CHECK_CRC64</span>    <span class='op'>=</span> <span class='number'>4</span>,
+	<span class='ident'>LZMA_CHECK_SHA256</span>   <span class='op'>=</span> <span class='number'>10</span>,
 }
 
 

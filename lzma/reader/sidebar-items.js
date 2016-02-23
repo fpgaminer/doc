@@ -1,1 +1,1 @@
-initSidebarItems({"struct":[["LZMAReader",""]]});
+initSidebarItems({"struct":[["LzmaReader",""]]});

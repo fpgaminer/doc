@@ -1,1 +1,1 @@
-initSidebarItems({"struct":[["LZMAWriter",""]]});
+initSidebarItems({"struct":[["LzmaWriter",""]]});

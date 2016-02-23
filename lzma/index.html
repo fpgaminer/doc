@@ -46,20 +46,20 @@
             <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
                 [<span class='inner'>&#x2212;</span>]
             </a>
-        </span><a id='src-0' class='srclink' href='../src/lzma/lib.rs.html#1-78' title='goto source code'>[src]</a></span></h1>
+        </span><a id='src-0' class='srclink' href='../src/lzma/lib.rs.html#1-77' title='goto source code'>[src]</a></span></h1>
 <div class='docblock'><p>This crate provides a simple interface to liblzma.  LZMA is more commonly known as XZ or 7zip,
 (as in, files with the <code>.xz</code> or <code>.7z</code> file extension). LZMA compression is fast and aggressive,
 compressing better than bzip2.  liblzma implements the XZ variant, so it can read and write
 <code>.xz</code> files/streams.</p>
 
-<p>Two interfaces are provided.  <code>LZMAReader</code>/<code>LZMAWriter</code> are generic Readers and Writers that
+<p>Two interfaces are provided.  <code>LzmaReader</code>/<code>LzmaWriter</code> are generic Readers and Writers that
 can be composed with other <code>Read</code>/<code>Write</code> interfaces.  For example, wrap them around a <code>File</code>
 and you can write data to a file while compressing it on the fly, or stream in an <code>xz</code> file
 from disk.</p>
 
 <p><code>compress</code>/<code>decompress</code> are easy to use functions for simple use cases.</p>
 
-<p>See the <code>LZMAReader</code> and <code>LZMAWriter</code> documentation for further details on that interface.
+<p>See the <code>LzmaReader</code> and <code>LzmaWriter</code> documentation for further details on that interface.
 <code>compress</code> and <code>decompress</code> are documented here.</p>
 
 <h1 id='examples' class='section-header'><a href='#examples'>Examples</a></h1><pre class='rust rust-example-rendered'>
@@ -70,13 +70,22 @@ from disk.</p>
 
 <span class='macro'>assert_eq</span><span class='macro'>!</span>(<span class='string'>&quot;Like tears in rain&quot;</span>, <span class='ident'>decompressed_str</span>);</pre>
 </div><h2 id='reexports' class='section-header'><a href="#reexports">Reexports</a></h2>
-<table><tr><td><code>pub use reader::<a class='struct' href='../lzma/reader/struct.LZMAReader.html' title='lzma::reader::LZMAReader'>LZMAReader</a>;</code></td></tr><tr><td><code>pub use writer::<a class='struct' href='../lzma/writer/struct.LZMAWriter.html' title='lzma::writer::LZMAWriter'>LZMAWriter</a>;</code></td></tr><tr><td><code>pub use error::<a class='enum' href='../lzma/error/enum.LZMAError.html' title='lzma::error::LZMAError'>LZMAError</a>;</code></td></tr></table><h2 id='modules' class='section-header'><a href="#modules">Modules</a></h2>
+<table><tr><td><code>pub use reader::<a class='struct' href='../lzma/reader/struct.LzmaReader.html' title='lzma::reader::LzmaReader'>LzmaReader</a>;</code></td></tr><tr><td><code>pub use writer::<a class='struct' href='../lzma/writer/struct.LzmaWriter.html' title='lzma::writer::LzmaWriter'>LzmaWriter</a>;</code></td></tr><tr><td><code>pub use error::<a class='enum' href='../lzma/error/enum.LzmaError.html' title='lzma::error::LzmaError'>LzmaError</a>;</code></td></tr></table><h2 id='modules' class='section-header'><a href="#modules">Modules</a></h2>
 <table>
                     <tr class=' module-item'>
                         <td><a class='mod' href='error/index.html'
                                title='lzma::error'>error</a></td>
                         <td class='docblock short'>
                              
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='mod' href='lzma_stream_wrapper/index.html'
+                               title='lzma::lzma_stream_wrapper'>lzma_stream_wrapper</a></td>
+                        <td class='docblock short'>
+                             <p>Wraps the underlying FFI struct <code>lzma_stream</code> to provide various safety guarantees, like the Send trait.</p>
+
                         </td>
                     </tr>
                 
@@ -92,7 +101,7 @@ from disk.</p>
                         <td><a class='mod' href='reader/index.html'
                                title='lzma::reader'>reader</a></td>
                         <td class='docblock short'>
-                             <p>This module implements <code>LZMAReader</code>.</p>
+                             <p>This module implements <code>LzmaReader</code>.</p>
 
                         </td>
                     </tr>
@@ -101,7 +110,7 @@ from disk.</p>
                         <td><a class='mod' href='writer/index.html'
                                title='lzma::writer'>writer</a></td>
                         <td class='docblock short'>
-                             <p>This module implements <code>LZMAWriter</code>.</p>
+                             <p>This module implements <code>LzmaWriter</code>.</p>
 
                         </td>
                     </tr>

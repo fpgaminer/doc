@@ -1,1 +1,1 @@
-initSidebarItems({"enum":[["LZMAError","An error produced by an operation on LZMA data"]],"type":[["LZMALibResult",""]]});
+initSidebarItems({"enum":[["LzmaError","An error produced by an operation on LZMA data"]],"type":[["LzmaLibResult",""]]});
